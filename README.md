@@ -1,2 +1,11 @@
 # Archivos-Alarma-de-Incendio
-Llevar a cabo proyecto grupo-01 de alarma de incendios
+Que aremos
+Antecedentes
+detalles tecnicos
+metodologia
+Analisis financiero
+conclusiones
+recomendaciones
+Archivos de codigo
+Archivos de diseño
+Recursos adicionales
