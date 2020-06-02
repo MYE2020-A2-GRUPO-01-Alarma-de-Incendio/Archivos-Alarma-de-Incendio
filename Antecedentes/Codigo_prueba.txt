@@ -1,0 +1,19 @@
+void setup()
+   {
+       pinMode(9, OUTPUT);
+   }
+
+void loop()
+   {
+       int v = analogRead(A0) ;
+       if ( v > 10)
+            beep(200) ;
+   }
+  
+void beep(unsigned char pausa)
+   {
+       analogWrite(9, 20);
+       delay(pausa);             // Espera
+       analogWrite(9, 0);        // Apaga
+       delay(pausa);             // Espera
+   }
