@@ -1,0 +1,13 @@
+void loop()
+{
+  gas = analogRead(A5);
+  temperatura = analogRead(A2);
+  Serial.println(gas);
+  Serial.println(temperatura);
+  if ((gas <= 709 && gas >= 400){
+    digitalWrite(6, HIGH);
+    delay(500); // Wait for 500 millisecond(s)
+    digitalWrite(6, LOW);
+  } else {
+    digitalWrite(6, LOW);
+  }
