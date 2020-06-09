@@ -1,0 +1,7 @@
+
+  if ((gas <= 709 && gas >= 400) && (temperatura <= 150 && temperatura >= 50)) {
+    tone(4, 262, 1000); // play tone 48 (C4 = 262 Hz)
+    delay(500); // Wait for 500 millisecond(s)
+    tone(4, 440, 1000); // play tone 57 (A4 = 440 Hz)
+  } 
+}
