@@ -1,0 +1,14 @@
+int gas = 0;
+
+int temperatura = 0;
+
+void setup()
+{
+  pinMode(A5, INPUT);
+  pinMode(A2, INPUT);
+  Serial.begin(9600);
+
+  pinMode(6, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
