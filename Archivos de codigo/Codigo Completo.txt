@@ -1,0 +1,35 @@
+int gas = 0;
+
+int temperatura = 0;
+
+void setup()
+{
+  pinMode(A5, INPUT);
+  pinMode(A2, INPUT);
+  Serial.begin(9600);
+
+  pinMode(6, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  gas = analogRead(A5);
+  temperatura = analogRead(A2);
+  Serial.println(gas);
+  Serial.println(temperatura);
+  if ((gas <= 709 && gas >= 400) && (temperatura <= 150 && temperatura >= 50)) {
+    digitalWrite(6, HIGH);
+    delay(500); // Wait for 500 millisecond(s)
+    digitalWrite(6, LOW);
+  } else {
+    digitalWrite(6, LOW);
+  }
+  if ((gas <= 709 && gas >= 400) && (temperatura <= 150 && temperatura >= 50)) {
+    tone(4, 262, 1000); // play tone 48 (C4 = 262 Hz)
+    delay(500); // Wait for 500 millisecond(s)
+    tone(4, 440, 1000); // play tone 57 (A4 = 440 Hz)
+  } else {
+    noTone(4);
+  }
+}
